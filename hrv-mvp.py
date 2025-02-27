@@ -24,6 +24,7 @@ def authenticate_user():
             if username == "gemba_test" and password == "@gemba#1":
                 st.session_state["authenticated"] = True
                 st.sidebar.success("Login successful!")
+                st.experimental_rerun()
             else:
                 st.sidebar.error("Invalid username or password.")
     
