@@ -1,5 +1,5 @@
 import streamlit as st
-import pandas as pd
+# import pandas as pd
 import math
 import matplotlib.pyplot as plt
 import numpy as np
@@ -259,42 +259,42 @@ def forecast():
     plot_forecast_chart(years, meetings, forecast_year, num_meetings, "Target Total Meetings Per Annum", "Total Meetings", "darkgreen")
 
 
-def data_comparison():
-    st.title("Comparison: Benchmark vs. Saved Results")
+# def data_comparison():
+#     st.title("Comparison: Benchmark vs. Saved Results")
     
-    if st.session_state["dataset"] is None:
-        st.warning("No data uploaded. Please upload a CSV file in the Home page first.")
-    else:
-        df = st.session_state["dataset"]
-        required_columns = ["Year", "Average of STARTERS", "Avg Number of Races", "Sum of STARTERS", "Count of RACE_MEETING_CODE", "Count of RACE_CODE"]
+#     if st.session_state["dataset"] is None:
+#         st.warning("No data uploaded. Please upload a CSV file in the Home page first.")
+#     else:
+#         df = st.session_state["dataset"]
+#         required_columns = ["Year", "Average of STARTERS", "Avg Number of Races", "Sum of STARTERS", "Count of RACE_MEETING_CODE", "Count of RACE_CODE"]
         
-        # Check if all required columns exist
-        missing_columns = [col for col in required_columns if col not in df.columns]
-        if missing_columns:
-            st.error(f"The dataset is missing the following required columns: {', '.join(missing_columns)}")
-            return
+#         # Check if all required columns exist
+#         missing_columns = [col for col in required_columns if col not in df.columns]
+#         if missing_columns:
+#             st.error(f"The dataset is missing the following required columns: {', '.join(missing_columns)}")
+#             return
         
-        years = df["Year"].unique()
-        selected_year = st.selectbox("Select Benchmark Year", sorted(years, reverse=True))  # Dropdown for Year Selection
-        st.subheader(f"Benchmark Year: {selected_year}")  # Display it as text
+#         years = df["Year"].unique()
+#         selected_year = st.selectbox("Select Benchmark Year", sorted(years, reverse=True))  # Dropdown for Year Selection
+#         st.subheader(f"Benchmark Year: {selected_year}")  # Display it as text
         
-        benchmark_data = df[df["Year"] == selected_year][required_columns].copy()
-        benchmark_data["Year"] = benchmark_data["Year"].astype(str)
+#         benchmark_data = df[df["Year"] == selected_year][required_columns].copy()
+#         benchmark_data["Year"] = benchmark_data["Year"].astype(str)
         
-        if not st.session_state["saved_results"]:
-            st.warning("No saved results found. Try saving some results in the Home page.")
-            return
+#         if not st.session_state["saved_results"]:
+#             st.warning("No saved results found. Try saving some results in the Home page.")
+#             return
 
-        saved_results_df = pd.DataFrame(st.session_state["saved_results"])
+#         saved_results_df = pd.DataFrame(st.session_state["saved_results"])
         
-        for col in saved_results_df.columns:
-            saved_results_df[col] = pd.to_numeric(saved_results_df[col], errors="coerce")
+#         for col in saved_results_df.columns:
+#             saved_results_df[col] = pd.to_numeric(saved_results_df[col], errors="coerce")
         
-        st.subheader("Comparison Table")
-        st.dataframe(saved_results_df)
+#         st.subheader("Comparison Table")
+#         st.dataframe(saved_results_df)
             
-        st.subheader("Benchmark Data")
-        st.dataframe(benchmark_data)
+#         st.subheader("Benchmark Data")
+#         st.dataframe(benchmark_data)
 
 def model_logic():
     st.title("Model Logic")
