@@ -156,9 +156,9 @@ if authenticate_user():
 
 
         # Display results
-        st.write(f"Predicted Starters: {predicted_starters}")
-        st.write(f"Optimal number of races to be conducted: {num_races}")
-        st.write(f"Optimal number of meetings to be conducted: {num_meetings}")
+        st.write(f"Predicted Starters: {predicted_starters:,}")
+        st.write(f"Optimal number of races to be conducted: {num_races:,}")
+        st.write(f"Optimal number of meetings to be conducted: {num_meetings:,}")
 
         # Historical Data
         years = np.array([2018, 2019, 2020, 2021, 2022, 2023, 2024])
