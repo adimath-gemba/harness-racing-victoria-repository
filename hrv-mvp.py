@@ -14,19 +14,20 @@ def authenticate_user():
         st.session_state["authenticated"] = False
     
     if not st.session_state["authenticated"]:
-        st.sidebar.title("Login")
-        username = st.sidebar.text_input("Username")
-        password = st.sidebar.text_input("Password", type="password")
-        login_button = st.sidebar.button("Login")
-        
-        # Replace with actual authentication logic
-        if login_button:
-            if username == "gemba_test" and password == "@gemba#1":
-                st.session_state["authenticated"] = True
-                st.sidebar.success("Login successful!")
-                st.experimental_rerun()
-            else:
-                st.sidebar.error("Invalid username or password.")
+        with st.sidebar:
+            st.sidebar.title("Login")
+            username = st.sidebar.text_input("Username")
+            password = st.sidebar.text_input("Password", type="password")
+            login_button = st.sidebar.button("Login")
+            
+            # Replace with actual authentication logic
+            if login_button:
+                if username == "gemba_test" and password == "@gemba#1":
+                    st.session_state["authenticated"] = True
+                    st.sidebar.success("Login successful!")
+                    st.experimental_rerun()
+                else:
+                    st.sidebar.error("Invalid username or password.")
     
     return st.session_state["authenticated"]
 
@@ -340,11 +341,11 @@ if authenticate_user():
                                 "menu-title": {"color": "white", "font-weight": "bold"}
                             })
 
-    if selected == "HOME":
+    if "selected" in locals() and selected == "HOME":
         home()
-    elif selected == "Data Comparison":
+    elif "selected" in locals() and selected == "Data Comparison":
         data_comparison()
-    elif selected == "Model Logic":
+    elif "selected" in locals() and selected == "Model Logic":
         model_logic()
-    elif selected == "Forecast":
+    elif "selected" in locals() and selected == "Forecast":
         forecast()
