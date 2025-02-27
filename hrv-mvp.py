@@ -5,6 +5,9 @@ import matplotlib.pyplot as plt
 import numpy as np
 from streamlit_option_menu import option_menu
 
+# Set the page layout to wide mode for full-screen charts
+st.set_page_config(layout="wide")
+
 def authenticate_user():
     """Handles user authentication."""
     if "authenticated" not in st.session_state:
@@ -26,10 +29,9 @@ def authenticate_user():
     
     return st.session_state["authenticated"]
 
-# Set the page layout to wide mode for full-screen charts
+
 # Ensure authentication before loading the app
 if authenticate_user():
-    st.set_page_config(layout="wide")
 
     def apply_custom_styles():
         st.markdown(
