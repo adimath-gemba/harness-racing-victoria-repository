@@ -84,7 +84,7 @@ def authenticate_user():
         )
 
         # Title
-        st.markdown("<h1 style='text-align: center;'>HRV Schedule Optimisation</h1>", unsafe_allow_html=True)
+        st.markdown("<h1 style='text-align: center;'>HRV Race Schedule Optimisation</h1>", unsafe_allow_html=True)
 
         # Login Form (Higher on Page)
         st.markdown("<div class='login-container'>", unsafe_allow_html=True)
