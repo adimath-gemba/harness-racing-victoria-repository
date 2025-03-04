@@ -15,7 +15,7 @@ def customize_sidebar(logo_url):
             """,
             unsafe_allow_html=True,
         )
-        st.markdown("<div class='sidebar-title'>OPTIMAISATION MODEL</div>", unsafe_allow_html=True)
+        st.markdown("<div class='sidebar-title'>OPTIMISATION MODEL</div>", unsafe_allow_html=True)
  
         if st.button("Model", key="home_button"):
             st.session_state["page"] = "Model"
