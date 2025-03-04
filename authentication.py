@@ -87,7 +87,7 @@ def authenticate_user():
         st.markdown("<h1 style='text-align: center;'>HRV Race Schedule Optimisation</h1>", unsafe_allow_html=True)
 
         # Login Form (Higher on Page)
-        st.markdown("<div class='login-container'>", unsafe_allow_html=True)
+        # st.markdown("<div class='login-container'>", unsafe_allow_html=True)
 
         # Centered Input Fields
         username = st.text_input("Username", key="username_input")
