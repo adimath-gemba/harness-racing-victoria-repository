@@ -51,14 +51,17 @@ def show():
     st.title("Race Scheduling Optimiser")
 
     # Input Fields
-    avg_starters_per_race = st.number_input("Enter the average starters per race:", min_value=1.0, value=9.16)
-    races_per_meeting = st.number_input("Enter the number of races per meeting:", min_value=1.0, value=9.24)
-    season_weighting = st.number_input("Enter the season weighting (%):", min_value=0, value=5)
+    avg_starters_per_race = st.number_input("Enter the average starters per race:", min_value=1.0, value=9.16, help = "The average number of starters you would like to achieve")
+    races_per_meeting = st.number_input("Enter the number of races per meeting:", min_value=1.0, value=9.24, help = "The average number of races per meeting you would like achieve")
+    season_weighting = st.number_input("Enter the winter to summer race ratio (%):", min_value=0, value=5, help = "The ratio of winter to summer races you would like achieve, eg: 5% would mean 5% more races in winter than summer")
 
     # Constants
     WT, R, ARH, HORSE_ID, HTR, DBR, NR, PM = 232879.18, 3179, 14.37, 3376, 4.41, 18.44, 53.04, 19434.311
     SW = 1.10 - (season_weighting / 100)
 
+    #submit instructions
+    st.markdown("<h6 style='text-align: center;'>To visualise optimised outputs please adjust metrics above and press submit</h6>", unsafe_allow_html=True)
+    # st.text("To visualise optimised outputs please adjust metrics above and press submit")
     if st.button("Submit"):
         # Predictions
         predicted_starters = predict_optimal_starters(WT, R, ARH, HORSE_ID, HTR, DBR, NR, PM, SW)
