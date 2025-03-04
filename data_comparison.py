@@ -24,7 +24,7 @@ def show():
 
     # Check if there are saved results from home.py
     if "saved_results" not in st.session_state or not st.session_state["saved_results"]:
-        st.warning("No saved predictions found. Submit values in the Race Scheduling Optimiser first.")
+        st.warning("No saved predictions found. Please submit values in the Race Scheduling Optimiser first.")
         saved_results_df = pd.DataFrame()  # Empty DataFrame for consistency
     else:
         saved_results_df = pd.DataFrame(st.session_state["saved_results"]).tail(10)
