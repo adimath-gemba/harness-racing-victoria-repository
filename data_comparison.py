@@ -13,10 +13,9 @@ def show():
         "Year": np.array([2018, 2019, 2020, 2021, 2022, 2023, 2024], dtype=int),
         "Avg Starters per Race": np.array([8.44, 8.44, 8.69, 8.80, 8.69, 9.02, 9.09]),
         "Races per Meeting": np.array([8.82, 8.77, 8.54, 9.16, 9.49, 9.42, 8.79]),
-        "Predicted Starters": np.array([32515, 32433, 35003, 35217, 36175, 37557, 34133]),
+        "Total Starters": np.array([32515, 32433, 35003, 35217, 36175, 37557, 34133]),
         "Number of Races": np.array([3853, 3842, 4029, 4001, 4164, 4163, 3753]),
-        "Number of Meetings": np.array([437, 438, 472, 437, 439, 442, 427]),
-        "Season Weighting": np.array([0, 0, 0, 0, 0, 0, 0])
+        "Number of Meetings": np.array([437, 438, 472, 437, 439, 442, 427])
     }
 
     # Convert to DataFrame

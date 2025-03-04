@@ -110,15 +110,15 @@ def show():
 
         with col1:
             st.markdown(f"<h4 style='text-align: center;'>Predicted Starters</h4>", unsafe_allow_html=True)
-            st.markdown(f"<h3 style='text-align: center; color: black;'>{predicted_starters}</h3>", unsafe_allow_html=True)
+            st.markdown(f"<h3 style='text-align: center; color: black;'>{predicted_starters:,}</h3>", unsafe_allow_html=True)
 
         with col2:
             st.markdown(f"<h4 style='text-align: center;'>Optimal Number of Races</h4>", unsafe_allow_html=True)
-            st.markdown(f"<h3 style='text-align: center; color: black;'>{num_races}</h3>", unsafe_allow_html=True)
+            st.markdown(f"<h3 style='text-align: center; color: black;'>{num_races:,}</h3>", unsafe_allow_html=True)
 
         with col3:
             st.markdown(f"<h4 style='text-align: center;'>Optimal Number of Meetings</h4>", unsafe_allow_html=True)
-            st.markdown(f"<h3 style='text-align: center; color: black;'>{num_meetings}</h3>", unsafe_allow_html=True)
+            st.markdown(f"<h3 style='text-align: center; color: black;'>{num_meetings:,}</h3>", unsafe_allow_html=True)
 
 
 
