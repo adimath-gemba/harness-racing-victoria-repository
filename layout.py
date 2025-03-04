@@ -23,8 +23,8 @@ def customize_sidebar(logo_url):
             st.session_state["page"] = "Logic"
         if st.button("Data Comparison", key="data_comparison_button"):
             st.session_state["page"] = "Data Comparison"
-        if st.button("Forecast", key="forecast_button"):
-            st.session_state["page"] = "Forecast"
+        # if st.button("Forecast", key="forecast_button"):
+        #     st.session_state["page"] = "Forecast"
  
         st.markdown("<div class='powered-by'>Powered by Gemba Data & Analytics</div>", unsafe_allow_html=True)
  

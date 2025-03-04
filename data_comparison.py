@@ -29,8 +29,10 @@ def show():
     else:
         saved_results_df = pd.DataFrame(st.session_state["saved_results"]).tail(10)
 
+    
     # Display Historical Data Table with Selection
     st.subheader("Historical Data")
+    st.text("Historical Year on Year comparision")
     selected_historical = st.data_editor(
         historical_df,
         hide_index=True,
@@ -51,7 +53,9 @@ def show():
         )
 
     # Display Saved Predictions Table with Selection
+    # st.markdown("<h6 style='text-align: center;'>Any predictions saved from the model page will appear here</h6>", unsafe_allow_html=True)
     st.subheader("Saved Predictions")
+    st.text("Any predictions saved from the model page will appear here")
     selected_predictions = st.data_editor(
         saved_results_df,
         hide_index=True,

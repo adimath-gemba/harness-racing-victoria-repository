@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 from streamlit_option_menu import option_menu
 
-import home
+import model
 import logic
 import data_comparison
 import forecast
@@ -31,13 +31,13 @@ def main():
 
         # Route to the selected page
         if st.session_state["page"] == "Model":
-            home.show()
+            model.show()
         elif st.session_state["page"] == "Logic":
             logic.show()
         elif st.session_state["page"] == "Data Comparison":
             data_comparison.show()
-        elif st.session_state["page"] == "Forecast":
-            forecast.show()
+        # elif st.session_state["page"] == "Forecast":
+        #     forecast.show()
 
 if __name__ == "__main__":
     main()
