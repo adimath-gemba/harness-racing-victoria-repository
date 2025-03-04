@@ -26,7 +26,7 @@ def customize_sidebar(logo_url):
         # if st.button("Forecast", key="forecast_button"):
         #     st.session_state["page"] = "Forecast"
  
-        st.markdown("<div class='powered-by'>Powered by Gemba Data & Analytics</div>", unsafe_allow_html=True)
+        st.markdown("<div class='powered-by'>Powered by Gemba</div>", unsafe_allow_html=True)
  
 # ----------------- CSS Markdown Function -----------------
  
