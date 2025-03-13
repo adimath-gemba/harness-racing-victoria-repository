@@ -96,8 +96,8 @@ def authenticate_user():
 
         if login_button:
                 
-            if username == "hrv_test" and password == "@gemba#1":
-            # if username == st.secrets["username"] and password == st.secrets["password"]:
+            # if username == "hrv_test" and password == "@gemba#1":
+            if username == st.secrets["username"] and password == st.secrets["password"]:
 
                 st.session_state["authenticated"] = True
                 st.rerun()  # Refresh UI after login
