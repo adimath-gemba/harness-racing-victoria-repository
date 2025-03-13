@@ -19,10 +19,10 @@ def customize_sidebar(logo_url):
  
         if st.button("Model", key="home_button"):
             st.session_state["page"] = "Model"
-        if st.button("Logic", key="logic_button"):
-            st.session_state["page"] = "Logic"
         if st.button("Data Comparison", key="data_comparison_button"):
             st.session_state["page"] = "Data Comparison"
+        if st.button("Logic", key="logic_button"):
+            st.session_state["page"] = "Logic"
         # if st.button("Forecast", key="forecast_button"):
         #     st.session_state["page"] = "Forecast"
  
